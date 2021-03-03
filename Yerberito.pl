@@ -375,6 +375,7 @@ es_medicamento(eucalipto).
 es_medicamento(vitamina_c).
 es_medicamento(quercitrina).
 
+
 usar(cocimiento).
 usar(infusion).
 usar(maceracion).
@@ -418,6 +419,7 @@ proviene_de(morfina, opio).
 proviene_de(codeina, opio).
 proviene_de(digitalina, digital).
 proviene_de(tonico_cardiaco, digital).
+proviene_de(tonico_cardiaco, alcanfor).  % alcanfor %
 proviene_de(emetina, ipeca).
 proviene_de(estricnina, nuez_vomica).
 proviene_de(veratrina, eleboro_blanco).
@@ -438,6 +440,7 @@ proviene_de(ácido_lisergico, toloache).
 proviene_de(eucaliptol, eucalipto).
 proviene_de(vitamina_c, rosal).
 proviene_de(quercitrina, rosal).
+
 
 cura_a(acedera, hipotension).
 cura_a(aceite_de_bacalao, falta_de_vitaminas).
@@ -470,8 +473,12 @@ cura_a(ajo, tuberculosis).
 cura_a(ajo, voz).
 cura_a(albahaca, diarrea_por_inflamacion).
 cura_a(albahaca, vertigos).
+cura_a(albahaca, evitar_caida_del_cabello). 	% albahaca %
 cura_a(alcachofa, hepatitis).
 cura_a(alcachofa, hidropesia).
+cura_a(alcachofa, descongestiona_higado).		%alcachofa %
+cura_a(alcachofa, desinflama_vesicula).			%alcachofa %
+cura_a(alcachofa, disuelve_calculos_biliares).	%alcachofa %
 cura_a(alcanfor, arteriosclerosis).
 cura_a(alcanfor, artritis).
 cura_a(alcanfor, dolores_musculares).
@@ -479,6 +486,10 @@ cura_a(alcanfor, gota).
 cura_a(alcanfor, piquetes_de_mosco).
 cura_a(alcanfor, sarna).
 cura_a(alcanfor, tifoidea).
+cura_a(alcanfor, golpes).						% alcanfor %
+cura_a(alcanfor, torceduras).
+cura_a(alcanfor, tumefacciones).
+cura_a(alcanfor, reumatismo).					% alcanfor %
 cura_a(alfalfa, flebitis).
 cura_a(alfalfa, falta_de_vitaminas).
 cura_a(alholva , anemia).
@@ -992,6 +1003,21 @@ cura_a(monacillo, diarrea_con_sangre).
 
 % Otras cosas %
 
+% Albahaca, alcachofa %
+nombre_en_latin(albahaca, ocimum_basilicum).
+nombre_en_latin(alcachofa, cynara_scolimus).
+nombre_en_latin(alcanfor, laurus_camphora).
+
+propiedades_de(albahaca, [diuretica, carminativa, emenagoga]).
+propiedades_de(albahaca, [evita_polillas]).
+tratamiento(caida_del_cabello, [[hervir_hojas_frescas_de_albahaca,
+                                        exprimir_las_hojas,
+                                        friccionar_el_jugo_en_el_cabello],
+                                 [aqui_va_otro_tratamiento_con_otra_planta]]).
+tratamiento(diabetes, [[beber_el_cocimiento],
+                        [aqui_va_otro_tratamiento_con_otra_planta]]).
+
+contiene(alcachofa, insulina).
 
 
 
